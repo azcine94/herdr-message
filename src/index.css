@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+    overflow: hidden;
+    font-family: "Segoe UI Variable Text", "Inter", "PingFang SC", "Microsoft YaHei UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #f4f4f5;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Invisible scrollbars — pure mouse-wheel scrolling */
+.no-scrollbar,
+.island-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar,
+.island-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Obsidian capsule surface */
+.island-surface {
+  background: linear-gradient(180deg, rgba(16, 17, 21, 0.97) 0%, rgba(9, 10, 13, 0.985) 100%);
+  box-shadow:
+    0 14px 34px -8px rgba(0, 0, 0, 0.68),
+    0 4px 12px -2px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.11),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.075);
+}
+
+.island-surface-blocked {
+  box-shadow:
+    0 14px 36px -8px rgba(0, 0, 0, 0.72),
+    0 0 22px -4px rgba(245, 158, 11, 0.28),
+    inset 0 1px 0 0 rgba(251, 191, 36, 0.28),
+    inset 0 0 0 1px rgba(245, 158, 11, 0.26);
+}
